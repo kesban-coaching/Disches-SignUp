@@ -1,4 +1,13 @@
+import { useContext } from "react"
+import { Context } from "../store/context"
 
 export const Profil = () => {
-    return <div>Profil Page</div>
+    const {user} = useContext(Context)
+
+    return <div>
+        <div>Profil Page</div>
+        {user?.firstname}
+        {user?.lastname}
+    </div>
+
 }
